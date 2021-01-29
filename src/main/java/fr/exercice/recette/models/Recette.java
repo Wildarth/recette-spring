@@ -16,16 +16,15 @@ public class Recette implements Model{
 	private String id;
 	
 	private String nom;
-	//@DBRef
 	private List<Ingredient> ingredients;
 	@DBRef
-	private List<Categorie> Categories;
+	private List<Categorie> categories;
 	private String description;
 	
 	
 	public void ajouterCategorie(Categorie categorie) {
-		if(this.Categories == null) this.Categories = new ArrayList<>();
-		this.Categories.add(categorie);
+		if(this.categories == null) this.categories = new ArrayList<>();
+		this.categories.add(categorie);
 	}
 
 }

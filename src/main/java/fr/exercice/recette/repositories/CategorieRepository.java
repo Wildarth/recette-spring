@@ -7,4 +7,6 @@ import fr.exercice.recette.models.Categorie;
 @Repository
 public interface CategorieRepository extends HttpRepository<Categorie>{
 
+	Categorie findByNomAllIgnoreCase(String categorie);
+
 }
