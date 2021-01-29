@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Document("categories")
-public class Categorie {
+public class Categorie implements Model{
 	
 	@Id
 	private String id;

@@ -2,9 +2,10 @@ package fr.exercice.recette.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.NoRepositoryBean;
-import org.springframework.stereotype.Repository;
+
+import fr.exercice.recette.models.Model;
 
 @NoRepositoryBean
-public interface HttpRepository<T> extends MongoRepository<T, String> {
+public interface HttpRepository<T extends Model> extends MongoRepository<T, String> {
 
 }

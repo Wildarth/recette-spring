@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 @Document("recettes")
-public class Recette {
+public class Recette implements Model{
 	
 	@Id
 	private String id;
@@ -17,7 +17,7 @@ public class Recette {
 	private String nom;
 	//@DBRef
 	private List<Ingredient> ingredients;
-	//@DBRef
+	@DBRef
 	private List<Categorie> Categories;
 	private String description;
 
