@@ -1,5 +1,6 @@
 package fr.exercice.recette.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -20,5 +21,11 @@ public class Recette implements Model{
 	@DBRef
 	private List<Categorie> Categories;
 	private String description;
+	
+	
+	public void ajouterCategorie(Categorie categorie) {
+		if(this.Categories == null) this.Categories = new ArrayList<>();
+		this.Categories.add(categorie);
+	}
 
 }

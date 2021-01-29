@@ -16,7 +16,7 @@ import fr.exercice.recette.services.HttpService;
 
 public abstract class HttpController<T extends Model> {	
 	
-	private HttpService<T> service;
+	protected HttpService<T> service;
 	
 	protected  HttpController(HttpService<T> service){
 		this.service = service;
@@ -53,4 +53,6 @@ public abstract class HttpController<T extends Model> {
 	public void deleteById(@PathVariable String id) {
 		this.service.deleteById(id);
 	}
+	
+	
 }

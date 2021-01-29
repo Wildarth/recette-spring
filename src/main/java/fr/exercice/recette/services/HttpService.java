@@ -13,7 +13,7 @@ import fr.exercice.recette.repositories.HttpRepository;
 public abstract class HttpService<T extends Model> {
 	
 	
-	private HttpRepository<T> repository;
+	protected HttpRepository<T> repository;
 	
 	protected HttpService(HttpRepository<T> repository){
 		this.repository = repository;
